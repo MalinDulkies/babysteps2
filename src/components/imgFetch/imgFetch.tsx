@@ -8,7 +8,7 @@ function IMGFetch(props) {
         const [query, setQuery] = useState()
         useEffect(() => {
             fetch("/api/data?q=" + query).then(
-                res => setState(res.data)
+                res => setState(res.data) // data not found? but why :c
             )
         }, [query])
         function searchQuery(evt) {
