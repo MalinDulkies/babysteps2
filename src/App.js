@@ -1,13 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import ImgFetch from './components/ImgFetch/ImgFetch.js'
+import DisplayGif from './components/GifGallery/GifGallery.js'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        < ImgFetch />
+        < DisplayGif />
       </header>
     </div>
   );

@@ -1,5 +1,10 @@
-.background{
-    width: 100%;
+.search{
+    padding: 36px;
+}
+
+#searchInput{
+    width: 20%;
+    text-align: center;
 }
 
 
