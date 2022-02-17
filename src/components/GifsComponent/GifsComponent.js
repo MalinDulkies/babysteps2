@@ -6,7 +6,7 @@ const Gifs = () => {
     const [data, setData] = useState([]);
 
     async function fetchData() {
-        
+
         try {
             const res = await fetch("https://api.giphy.com/v1/gifs/trending?api_key=54FlpuWL5UPp0bgxRXMuklYyP9StShAG");
             console.log(res);

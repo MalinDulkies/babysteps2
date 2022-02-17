@@ -15,9 +15,7 @@ const SearchComponent = () => {
     async function fetchSearch() {
     try {
         const res = await fetch("https://api.giphy.com/v1/gifs/search?api_key=KS4crewOTMX1oXDXIN4eK35wHHX2D8N3&q="+ search);
-        console.log(res);
         const result = await res.json();
-        setData(result.data);
         console.log({ result, type: typeof result });
 
     } catch (error) {
@@ -27,7 +25,7 @@ const SearchComponent = () => {
 
 useEffect(() => {
     fetchSearch();
-}, []);
+}, [search]);
 
     return (
         <div>
@@ -35,7 +33,14 @@ useEffect(() => {
                 <input type="text" id="searchInput" onChange={getSearch} placeholder="What are you looking for?" />
             </div>
 
-          {/*   <GifsComponent /> */}
+            <div className="giphyData">
+                {data.map((entry) => {
+                    return (
+                        <img className="data" key={entry.id} src={entry.images.downsized_large.url} />
+                    )
+                })
+                }
+            </div>
 
         </div>
     )
