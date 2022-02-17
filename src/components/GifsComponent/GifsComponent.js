@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './GifsComponent.css';
 
-const Gifs = () => {
+const GifsComponent = () => {
     const [hasError, setErrors] = useState(false);
     const [data, setData] = useState([]);
 

@@ -3,7 +3,7 @@ import './GifGallery.css';
 import SearchComponent from "../SearchComponent/SearchComponent";
 
 
-const Gallery = () => {
+const GifGallery = () => {
 
 
   return (
@@ -15,4 +15,4 @@ const Gallery = () => {
   )
 
 };
-export default Gallery;
+export default GifGallery;
