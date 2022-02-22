@@ -8,7 +8,7 @@ const GifsComponent = () => {
     async function fetchData() {
 
         try {
-            const res = await fetch("https://api.giphy.com/v1/gifs/trending?api_key=54FlpuWL5UPp0bgxRXMuklYyP9StShAG");
+            const res = await fetch("https://api.giphy.com/v1/gifs/trending?api_key=54FlpuWL5UPp0bgxRXMuklYyP9StShAG&limit=5");
             console.log(res);
             const result = await res.json();
             setData(result.data);
@@ -41,4 +41,4 @@ const GifsComponent = () => {
     };
 }
 
-export default Gifs;
+export default GifsComponent;
